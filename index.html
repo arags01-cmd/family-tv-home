@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Family TV Home Screen</title>
+<meta name="description" content="Turn your TV's home screen into your family's: weather, birthdays, trash day and your teams. Free, no accounts, and nothing leaves your home.">
+<style>
+  :root { --bg: #0b0d12; --panel: #151821; --line: #262a35; --text: #f3f1ec; --muted: #a3a9b6; --accent: #b9b2ff; --warm: #e8c79a; --ok: #5bd38a; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font: 17px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 64px 0 32px; text-align: center; }
+  header .k { letter-spacing: .3em; text-transform: uppercase; color: var(--accent); font-size: 13px; }
+  header h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.1; margin: 10px 0 14px; font-weight: 700; }
+  header p { color: var(--muted); max-width: 640px; margin: 0 auto; font-size: 19px; }
+  .shot { width: 100%; border-radius: 16px; border: 1px solid var(--line); display: block; }
+  .hero { margin: 32px 0 8px; }
+  .promise { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 24px; }
+  .promise span { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 6px 14px; font-size: 14px; color: var(--muted); }
+  .promise b { color: var(--ok); font-weight: 600; margin-right: 4px; }
+  h2 { font-size: 28px; margin: 64px 0 8px; }
+  h2 .n { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #15122b; font-size: 18px; margin-right: 10px; vertical-align: 3px; }
+  .lead { color: var(--muted); margin-bottom: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+  .card h3 { font-size: 18px; margin-bottom: 6px; }
+  .card p, .card li { color: var(--muted); font-size: 15px; }
+  ol.steps { padding-left: 22px; }
+  ol.steps li { margin: 8px 0; }
+  ol.steps b { color: var(--text); }
+  .tabs { display: flex; gap: 8px; margin: 6px 0 14px; flex-wrap: wrap; }
+  .tabs button { border: 1px solid var(--line); background: var(--panel); color: var(--muted); border-radius: 999px; padding: 8px 16px; font: inherit; font-size: 15px; cursor: pointer; }
+  .tabs button.on { color: var(--text); border-color: var(--accent); }
+  .dl { display: flex; flex-wrap: wrap; gap: 12px; margin: 10px 0 14px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--warm); color: #1d160b; text-decoration: none; font-weight: 700; border-radius: 12px; padding: 14px 20px; }
+  .btn.alt { background: var(--panel); color: var(--text); border: 1px solid var(--line); font-weight: 600; }
+  .note { border-left: 3px solid var(--warm); padding: 10px 14px; background: var(--panel); border-radius: 0 10px 10px 0; color: var(--muted); font-size: 15px; margin: 12px 0; }
+  .note b { color: var(--text); }
+  .phones { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 16px; }
+  .phones figure { margin: 0; }
+  .phones figcaption { color: var(--muted); font-size: 13px; text-align: center; margin-top: 6px; }
+  details { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin: 10px 0; }
+  details summary { cursor: pointer; font-weight: 600; }
+  details p { color: var(--muted); margin-top: 8px; font-size: 15px; }
+  code { background: #1d212b; border-radius: 6px; padding: 2px 6px; font-size: 14px; }
+  .thanks { text-align: center; margin-top: 56px; padding: 28px 22px; }
+  .thanks p { color: var(--muted); max-width: 520px; margin: 6px auto 18px; }
+  footer { color: var(--muted); font-size: 14px; text-align: center; padding: 64px 0 40px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="k">Free · for friends and family</div>
+    <h1>Your family's TV home screen</h1>
+    <p>Press Home and see the weather, birthdays, trash day, your teams' games and kid-safe local news. Your apps are one click away, and the ads are gone.</p>
+    <div class="promise">
+      <span><b>✓</b>Free, no ads</span><span><b>✓</b>No accounts</span><span><b>✓</b>Stays on your home Wi-Fi</span><span><b>✓</b>Undo anytime</span>
+    </div>
+    <img class="shot hero" src="img/tv.png" alt="The TV home screen with apps, weather, reminders and birthday countdowns">
+  </header>
+
+  <h2>What you need</h2>
+  <div class="grid">
+    <div class="card"><h3>📺 A Fire TV or Google TV</h3><p>Fire TV sticks and TVs (Toshiba, Insignia, Amazon), and Google TV or Android TV (Chromecast with Google TV, Onn, Sony, TCL, Hisense).</p></div>
+    <div class="card"><h3>💻 A computer, once</h3><p>Windows or Mac, on the same Wi-Fi as the TV. About 10 minutes. After that you won't need it.</p></div>
+    <div class="card"><h3>📱 Your phone</h3><p>For adding birthdays, trash day and picking a look. Any phone with a camera to scan a code.</p></div>
+  </div>
+
+  <h2><span class="n">1</span>Let the TV accept the setup</h2>
+  <p class="lead">This lets the setup app install the home screen. You'll switch it back off at the end.</p>
+  <div class="tabs" id="tvTabs"><button class="on" data-tv="fire">Fire TV</button><button data-tv="google">Google TV / Android TV</button></div>
+  <div class="card" data-for="fire">
+    <ol class="steps">
+      <li>Open <b>Settings</b> (the gear) → <b>My Fire TV</b> → <b>About</b>.</li>
+      <li>Click the first line (your TV's name) <b>7 times</b> until it says you're a developer.</li>
+      <li>Go back one screen and open <b>Developer options</b>.</li>
+      <li>Turn on <b>ADB debugging</b>. If you see <b>Apps from Unknown Sources</b>, you can leave it off.</li>
+    </ol>
+  </div>
+  <div class="card" data-for="google" hidden>
+    <ol class="steps">
+      <li>Open <b>Settings</b> → <b>System</b> → <b>About</b>.</li>
+      <li>Scroll to <b>Android TV OS build</b> and click it <b>7 times</b> until it says you're a developer.</li>
+      <li>Go back to <b>System</b> and open <b>Developer options</b>.</li>
+      <li>Turn on <b>USB debugging</b>. Some TVs also have <b>Wireless</b> or <b>Network debugging</b>: turn that on too.</li>
+    </ol>
+  </div>
+
+  <h2><span class="n">2</span>Get Family TV Setup</h2>
+  <p class="lead">One small app for your computer. It finds your TV, installs the home screen and can put everything back later.</p>
+  <div class="dl">
+    <a class="btn" id="dlWin" href="#">⬇ Windows</a>
+    <a class="btn" id="dlMac" href="#">⬇ Mac</a>
+  </div>
+  <div class="note"><b>You'll see a warning the first time.</b> The app is free and made by a family member, not a company, so it isn't "signed".<br>
+    <b>Windows:</b> if you see "Windows protected your PC", click <b>More info</b> → <b>Run anyway</b>.<br>
+    <b>Mac:</b> if it says the app "can't be opened", go to <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>.</div>
+
+  <h2><span class="n">3</span>Set up the TV</h2>
+  <div class="grid">
+    <div class="card">
+      <ol class="steps">
+        <li>Open <b>Family TV Setup</b> and click <b>Find my TV</b>.</li>
+        <li>On the TV, a box asks <b>"Allow USB debugging?"</b> Tick <b>Always allow from this computer</b>, then <b>OK</b>.</li>
+        <li>Click <b>Set up the home screen</b>. Press Home on your remote to see it.</li>
+        <li>Optional: <b>Clean up ads and extras</b>. Nothing is deleted, and it can all be switched back.</li>
+        <li>Click <b>Finish</b>. This switches developer mode off again.</li>
+      </ol>
+    </div>
+    <img class="shot" src="img/setup-app.png" alt="The Family TV Setup app showing the TV is set up">
+  </div>
+
+  <h2><span class="n">4</span>Make it yours from your phone</h2>
+  <p class="lead">On the TV: <b>All apps</b> → <b>⚙ Customize this screen</b>. Scan the code with your phone camera. A few short steps and you're done.</p>
+  <div class="phones">
+    <figure><img class="shot" src="img/phone-start.png" alt="Pick who the TV is for"><figcaption>Who's it for</figcaption></figure>
+    <figure><img class="shot" src="img/phone-family.png" alt="Add the family and birthdays"><figcaption>Your family</figcaption></figure>
+    <figure><img class="shot" src="img/phone-home.png" alt="Zip code fills in weather, news and teams"><figcaption>Your zip code does the rest</figcaption></figure>
+    <figure><img class="shot" src="img/phone-week.png" alt="Trash day and reminders"><figcaption>Your week</figcaption></figure>
+  </div>
+  <p class="lead" style="margin-top:16px">On a laptop you get a live preview of the TV while you pick colors:</p>
+  <img class="shot" src="img/laptop-look.png" alt="Picking a theme on a laptop with a live TV preview">
+
+  <h2>Changed your mind?</h2>
+  <div class="grid">
+    <div class="card"><h3>Put everything back</h3><p>Turn developer mode on again (step 1), open Family TV Setup and click <b>Restore this TV</b>. It switches back on everything it switched off and gives you your old home screen.</p></div>
+    <div class="card"><h3>Just remove it</h3><p>On the TV: Settings → Applications → Manage installed applications → <b>Home Screen</b> → Uninstall. Your TV's own home comes back.</p></div>
+  </div>
+
+  <h2>Your privacy</h2>
+  <div class="card">
+    <ul class="steps" style="padding-left:20px">
+      <li>No accounts and no sign-ups. Nothing to log in to.</li>
+      <li>Your family's names, birthdays and reminders are saved <b>only on your TV</b>.</li>
+      <li>The phone page only works on your home Wi-Fi, with a code shown on the TV.</li>
+      <li>The TV only reaches out for public things: weather, scores and local headlines.</li>
+      <li>Kid-friendly: headlines about crime, accidents, courts and politics are never shown.</li>
+    </ul>
+  </div>
+
+  <h2>Questions</h2>
+  <details><summary>Does Netflix, YouTube and everything else still work?</summary><p>Yes. Your apps are on the home screen, and All apps shows everything. Nothing is uninstalled.</p></details>
+  <details><summary>No computer? (Fire TV only)</summary><p>Install the free <b>Downloader</b> app on the Fire TV, open it and type this address: <code id="apkUrl"></code>. Install, then open <b>Home Screen</b>. Without the computer step the Home button keeps going to Amazon's home, so open Home Screen from your apps.</p></details>
+  <details><summary>How do I get updates?</summary><p>Download Family TV Setup again from this page and run it. It updates the TV and keeps your family's settings.</p></details>
+  <details><summary>Is it really free?</summary><p>Yes. No ads, no subscription, no data collected. It's a family project shared with friends. If you'd like to say thanks, there's an optional <a href="https://ko-fi.com/familytvhomescreen" target="_blank" rel="noopener">tip jar on Ko-fi</a>.</p></details>
+
+  <div class="card thanks">
+    <h3>Enjoying it?</h3>
+    <p>It's free and always will be. If it made your TV a little nicer, you can buy me a coffee. Completely optional.</p>
+    <a class="btn" href="https://ko-fi.com/familytvhomescreen" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+  </div>
+
+  <footer>Family TV Home Screen · made at home, shared with friends · <a href="https://ko-fi.com/familytvhomescreen" target="_blank" rel="noopener">Ko-fi</a></footer>
+</div>
+<script>
+  // The one place to change if the downloads move
+  const REPO = "arags01-cmd/family-tv-home";
+  const dl = f => `https://github.com/${REPO}/releases/latest/download/${f}`;
+  document.getElementById("dlWin").href = dl("Family-TV-Setup-Windows.exe");
+  document.getElementById("dlMac").href = dl("Family-TV-Setup-Mac.dmg");
+  document.getElementById("apkUrl").textContent = dl("Family-TV-Home-Screen.apk");
+  // Pick the right steps for the visitor's TV
+  document.querySelectorAll("#tvTabs button").forEach(b => b.onclick = () => {
+    document.querySelectorAll("#tvTabs button").forEach(x => x.classList.toggle("on", x === b));
+    document.querySelectorAll("[data-for]").forEach(c => c.hidden = c.dataset.for !== b.dataset.tv);
+  });
+  // Mac visitors see the Mac button first
+  if (/Mac/i.test(navigator.platform || navigator.userAgent)) { const w = document.getElementById("dlWin"); w.parentNode.insertBefore(document.getElementById("dlMac"), w); }
+</script>
+</body>
+</html>
