@@ -48,6 +48,52 @@
   .thanks { text-align: center; margin-top: 56px; padding: 28px 22px; }
   .thanks p { color: var(--muted); max-width: 520px; margin: 6px auto 18px; }
   footer { color: var(--muted); font-size: 14px; text-align: center; padding: 64px 0 40px; }
+  /* Drawn pictures of the screens people will see (simplified, not real screenshots) */
+  .flow { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 16px; }
+  .flow figure { margin: 0; }
+  .flow figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; display: flex; gap: 8px; align-items: baseline; }
+  .flow figcaption .num { flex: none; display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #15122b; font-size: 12px; font-weight: 700; }
+  .flow figcaption b { color: var(--text); }
+  .scr { aspect-ratio: 16 / 9; background: linear-gradient(160deg, #1d2230, #0e1117); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-size: 11px; line-height: 1.25; overflow: hidden; position: relative; color: #c9ced8; display: flex; flex-direction: column; gap: 3px; }
+  .scr .t { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .scr .i { padding: 4px 8px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+  .scr .i.dim { opacity: .45; }
+  .scr .hl { background: #f3f1ec; color: #111; font-weight: 700; box-shadow: 0 0 0 2px var(--warm), 0 0 18px rgba(232,199,154,.45); }
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+  .tile { background: #262c3a; border-radius: 6px; padding: 9px 3px; text-align: center; font-size: 10px; }
+  .sw { flex: none; width: 24px; height: 13px; border-radius: 7px; background: #4a5060; position: relative; }
+  .sw::after { content: ""; position: absolute; top: 2px; left: 2px; width: 9px; height: 9px; border-radius: 50%; background: #aaa; }
+  .sw.on { background: var(--ok); }
+  .sw.on::after { left: 13px; background: #fff; }
+  .badge { flex: none; background: var(--warm); color: #1d160b; border-radius: 999px; padding: 1px 7px; font-size: 10px; font-weight: 800; }
+  .toast { position: absolute; left: 50%; bottom: 9px; transform: translateX(-50%); background: #3a4152; color: #fff; padding: 4px 11px; border-radius: 999px; font-size: 10px; white-space: nowrap; }
+  .win { aspect-ratio: 16 / 9; background: #0063b1; color: #fff; border-radius: 12px; padding: 12px 14px; font-size: 10.5px; line-height: 1.35; position: relative; overflow: hidden; }
+  .win h4 { font-size: 15px; font-weight: 400; margin-bottom: 6px; }
+  .win p { opacity: .9; }
+  .win .lnk { display: inline-block; margin-top: 6px; text-decoration: underline; padding: 1px 4px; border-radius: 4px; }
+  .win .lnk.hl, .win .wb.hl { background: #fff; color: #0063b1; box-shadow: 0 0 0 2px var(--warm); font-weight: 700; text-decoration: none; }
+  .win .row { position: absolute; right: 12px; bottom: 10px; display: flex; gap: 6px; }
+  .win .wb { border: 1px solid rgba(255,255,255,.85); padding: 3px 12px; }
+  .mac { aspect-ratio: 16 / 9; background: #ececee; color: #1d1d1f; border-radius: 12px; overflow: hidden; font-size: 10.5px; line-height: 1.3; position: relative; display: flex; flex-direction: column; }
+  .mac .bar { height: 18px; background: #dcdce0; display: flex; gap: 5px; align-items: center; padding-left: 8px; flex: none; }
+  .mac .bar i { width: 8px; height: 8px; border-radius: 50%; background: #ff5f57; }
+  .mac .bar i + i { background: #febc2e; } .mac .bar i + i + i { background: #28c840; }
+  .mac .body { flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 8px 12px; }
+  .mac .alert { background: #fff; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,.15); padding: 10px 12px; text-align: center; width: 86%; }
+  .mac .alert b { display: block; font-size: 11.5px; margin: 4px 0 3px; }
+  .mac .mb { display: inline-block; background: #fff; border: 1px solid #c8c8cc; border-radius: 6px; padding: 2px 10px; margin: 6px 2px 0; font-size: 10px; }
+  .mac .mb.blue { background: #0a84ff; color: #fff; border-color: #0a84ff; }
+  .mac .mb.hl { box-shadow: 0 0 0 2px var(--warm), 0 0 14px rgba(232,170,80,.6); font-weight: 700; }
+  .mac .side { width: 27%; align-self: stretch; background: #e0e0e4; padding: 8px 6px; font-size: 9.5px; color: #555; display: flex; flex-direction: column; gap: 3px; }
+  .mac .side .on { background: #0a84ff; color: #fff; border-radius: 4px; padding: 1px 4px; }
+  .mac .pane { flex: 1; align-self: stretch; padding: 8px 10px; }
+  .mac .pane .h { font-weight: 700; font-size: 11.5px; margin-bottom: 6px; }
+  .mac .box { background: #fff; border-radius: 8px; padding: 7px 9px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .appicon { width: 34px; height: 34px; border-radius: 8px; background: #0b0d12; display: grid; place-items: center; font-size: 18px; margin: 0 auto; }
+  .folder { width: 40px; height: 32px; border-radius: 4px; background: #5ab0f5; display: grid; place-items: center; color: #fff; font-size: 16px; margin: 0 auto; }
+  .arrow { font-size: 22px; color: #999; }
+  .lbl { font-size: 9.5px; text-align: center; margin-top: 3px; }
+  .dl + .note { margin-top: 4px; }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -72,22 +118,64 @@
 
   <h2><span class="n">1</span>Let the TV accept the setup</h2>
   <p class="lead">This lets the setup app install the home screen. You'll switch it back off at the end.</p>
-  <div class="tabs" id="tvTabs"><button class="on" data-tv="fire">Fire TV</button><button data-tv="google">Google TV / Android TV</button></div>
-  <div class="card" data-for="fire">
-    <ol class="steps">
-      <li>Open <b>Settings</b> (the gear) → <b>My Fire TV</b> → <b>About</b>.</li>
-      <li>Click the first line (your TV's name) <b>7 times</b> until it says you're a developer.</li>
-      <li>Go back one screen and open <b>Developer options</b>.</li>
-      <li>Turn on <b>ADB debugging</b>. If you see <b>Apps from Unknown Sources</b>, you can leave it off.</li>
-    </ol>
+  <div class="tabs" data-tabs="tv"><button class="on" data-show="fire">Fire TV</button><button data-show="google">Google TV / Android TV</button></div>
+  <div data-tab="tv:fire">
+    <div class="flow">
+      <figure>
+        <div class="scr"><div class="t">Settings</div>
+          <div class="tiles"><div class="tile">Network</div><div class="tile">Display &amp; Sounds</div><div class="tile">Applications</div><div class="tile">Controllers</div><div class="tile hl">My Fire TV</div><div class="tile">Accessibility</div></div>
+        </div>
+        <figcaption><span class="num">1</span><span>Open <b>Settings</b> (the gear), then <b>My Fire TV</b>.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="scr"><div class="t">My Fire TV</div>
+          <div class="i hl">About</div><div class="i">Legal &amp; Compliance</div><div class="i">Sleep</div><div class="i">Restart</div>
+        </div>
+        <figcaption><span class="num">2</span><span>Open <b>About</b>.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="scr"><div class="t">About</div>
+          <div class="i hl">Your TV's name <span class="badge">click ×7</span></div><div class="i">Storage</div>
+          <div class="toast">You are now a developer</div>
+        </div>
+        <figcaption><span class="num">3</span><span>Click the <b>first line 7 times</b> until it says you're a developer.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="scr"><div class="t">Developer options</div>
+          <div class="i hl">ADB debugging <span class="sw on"></span></div><div class="i">Apps from Unknown Sources <span class="sw"></span></div>
+        </div>
+        <figcaption><span class="num">4</span><span>Go back, open <b>Developer options</b> and turn on <b>ADB debugging</b>. Leave Unknown Sources off.</span></figcaption>
+      </figure>
+    </div>
   </div>
-  <div class="card" data-for="google" hidden>
-    <ol class="steps">
-      <li>Open <b>Settings</b> → <b>System</b> → <b>About</b>.</li>
-      <li>Scroll to <b>Android TV OS build</b> and click it <b>7 times</b> until it says you're a developer.</li>
-      <li>Go back to <b>System</b> and open <b>Developer options</b>.</li>
-      <li>Turn on <b>USB debugging</b>. Some TVs also have <b>Wireless</b> or <b>Network debugging</b>: turn that on too.</li>
-    </ol>
+  <div data-tab="tv:google" hidden>
+    <div class="flow">
+      <figure>
+        <div class="scr"><div class="t">Settings</div>
+          <div class="i">Accounts &amp; Sign In</div><div class="i">Apps</div><div class="i">Display &amp; Sound</div><div class="i hl">System</div>
+        </div>
+        <figcaption><span class="num">1</span><span>Open <b>Settings</b> (the gear, top right), then <b>System</b>.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="scr"><div class="t">System</div>
+          <div class="i hl">About</div><div class="i">Date &amp; time</div><div class="i">Language</div><div class="i">Storage</div>
+        </div>
+        <figcaption><span class="num">2</span><span>Open <b>About</b>.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="scr"><div class="t">About</div>
+          <div class="i dim">Device name</div><div class="i dim">Android TV OS version</div><div class="i hl">Android TV OS build <span class="badge">click ×7</span></div>
+          <div class="toast">You are now a developer!</div>
+        </div>
+        <figcaption><span class="num">3</span><span>Scroll down to <b>Android TV OS build</b> and click it <b>7 times</b>.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="scr"><div class="t">Developer options</div>
+          <div class="i hl">USB debugging <span class="sw on"></span></div><div class="i">Wireless debugging <span class="sw on"></span></div>
+        </div>
+        <figcaption><span class="num">4</span><span>Back in <b>System</b>, open <b>Developer options</b>. Turn on <b>USB debugging</b>, and <b>Wireless</b> or <b>Network debugging</b> if your TV has it.</span></figcaption>
+      </figure>
+    </div>
   </div>
 
   <h2><span class="n">2</span>Get Family TV Setup</h2>
@@ -96,9 +184,44 @@
     <a class="btn" id="dlWin" href="#">⬇ Windows</a>
     <a class="btn" id="dlMac" href="#">⬇ Mac</a>
   </div>
-  <div class="note"><b>You'll see a warning the first time.</b> The app is free and made by a family member, not a company, so it isn't "signed".<br>
-    <b>Windows:</b> if you see "Windows protected your PC", click <b>More info</b> → <b>Run anyway</b>.<br>
-    <b>Mac:</b> if it says the app "can't be opened", go to <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>.</div>
+  <div class="note"><b>You'll see a warning the first time.</b> The app is free and made by a family member, not a company, so it isn't "signed" by Microsoft or Apple. Here's how to open it:</div>
+  <div class="tabs" data-tabs="os"><button class="on" data-show="win">Windows</button><button data-show="mac">Mac</button></div>
+  <div data-tab="os:win">
+    <div class="flow">
+      <figure>
+        <div class="win"><h4>Windows protected your PC</h4><p>Windows stopped an app it doesn't recognize from starting.</p><span class="lnk hl">More info</span>
+          <div class="row"><span class="wb">Don't run</span></div></div>
+        <figcaption><span class="num">1</span><span>Open the download. If a blue box says <b>Windows protected your PC</b>, click <b>More info</b>.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="win"><h4>Windows protected your PC</h4><p>App: Family-TV-Setup-Windows.exe<br>Publisher: Unknown publisher</p>
+          <div class="row"><span class="wb hl">Run anyway</span><span class="wb">Don't run</span></div></div>
+        <figcaption><span class="num">2</span><span>Click <b>Run anyway</b>. Family TV Setup installs and opens by itself.</span></figcaption>
+      </figure>
+    </div>
+    <div class="note"><b>Finding it later:</b> it's called <b>Family TV Setup</b> (the icon is a TV with a heart). There's a shortcut on your desktop, or click Start and type <b>Family TV</b>. To keep it handy, right-click it and choose <b>Pin to taskbar</b>.</div>
+  </div>
+  <div data-tab="os:mac" hidden>
+    <div class="flow">
+      <figure>
+        <div class="mac"><div class="bar"><i></i><i></i><i></i></div>
+          <div class="body"><div><div class="appicon">📺</div><div class="lbl">Family TV Setup</div></div><div class="arrow">→</div><div><div class="folder">A</div><div class="lbl">Applications</div></div></div></div>
+        <figcaption><span class="num">1</span><span>Open the download and drag <b>Family TV Setup</b> into <b>Applications</b>. Then open it from Applications.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="mac"><div class="bar"><i></i><i></i><i></i></div>
+          <div class="body"><div class="alert"><b>"Family TV Setup" Not Opened</b><span class="mb hl">Done</span><span class="mb">Move to Trash</span></div></div></div>
+        <figcaption><span class="num">2</span><span>If it says the app can't be opened, click <b>Done</b> (not Move to Trash).</span></figcaption>
+      </figure>
+      <figure>
+        <div class="mac"><div class="bar"><i></i><i></i><i></i></div>
+          <div class="body" style="padding:0;gap:0"><div class="side"><span>Wi-Fi</span><span>General</span><span class="on">Privacy &amp; Security</span><span>Displays</span></div>
+            <div class="pane"><div class="h">Security</div><div class="box" style="flex-direction:column;align-items:flex-start"><span>"Family TV Setup" was blocked.</span><span class="mb hl" style="margin:0">Open Anyway</span></div></div></div></div>
+        <figcaption><span class="num">3</span><span>Open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>. You only do this once.</span></figcaption>
+      </figure>
+    </div>
+    <div class="note"><b>Finding it later:</b> it's called <b>Family TV Setup</b> (the icon is a TV with a heart), in your <b>Applications</b> folder. Or press <b>⌘ Space</b> and type <b>Family TV</b>. To keep it handy, while it's open right-click its Dock icon and choose <b>Options → Keep in Dock</b>.</div>
+  </div>
 
   <h2><span class="n">3</span>Set up the TV</h2>
   <div class="grid">
@@ -163,13 +286,17 @@
   document.getElementById("dlWin").href = dl("Family-TV-Setup-Windows.exe");
   document.getElementById("dlMac").href = dl("Family-TV-Setup-Mac.dmg");
   document.getElementById("apkUrl").textContent = dl("Family-TV-Home-Screen.apk");
-  // Pick the right steps for the visitor's TV
-  document.querySelectorAll("#tvTabs button").forEach(b => b.onclick = () => {
-    document.querySelectorAll("#tvTabs button").forEach(x => x.classList.toggle("on", x === b));
-    document.querySelectorAll("[data-for]").forEach(c => c.hidden = c.dataset.for !== b.dataset.tv);
-  });
-  // Mac visitors see the Mac button first
-  if (/Mac/i.test(navigator.platform || navigator.userAgent)) { const w = document.getElementById("dlWin"); w.parentNode.insertBefore(document.getElementById("dlMac"), w); }
+  // Tabs: TV type in step 1, computer type in step 2
+  const pick = (group, value) => {
+    document.querySelectorAll(`[data-tabs="${group}"] button`).forEach(x => x.classList.toggle("on", x.dataset.show === value));
+    document.querySelectorAll(`[data-tab^="${group}:"]`).forEach(c => c.hidden = c.dataset.tab !== `${group}:${value}`);
+  };
+  document.querySelectorAll("[data-tabs] button").forEach(b => b.onclick = () => pick(b.parentNode.dataset.tabs, b.dataset.show));
+  // Mac visitors see the Mac button and Mac steps first
+  if (/Mac/i.test(navigator.platform || navigator.userAgent)) {
+    const w = document.getElementById("dlWin"); w.parentNode.insertBefore(document.getElementById("dlMac"), w);
+    pick("os", "mac");
+  }
 </script>
 </body>
 </html>
