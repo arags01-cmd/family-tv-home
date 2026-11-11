@@ -50,6 +50,7 @@
   footer { color: var(--muted); font-size: 14px; text-align: center; padding: 64px 0 40px; }
   /* Drawn pictures of the screens people will see (simplified, not real screenshots) */
   .flow { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 16px; }
+  .flow.wide { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .flow figure { margin: 0; }
   .flow figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; display: flex; gap: 8px; align-items: baseline; }
   .flow figcaption .num { flex: none; display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #15122b; font-size: 12px; font-weight: 700; }
@@ -238,7 +239,13 @@
   </div>
 
   <h2><span class="n">4</span>Make it yours from your phone</h2>
-  <p class="lead">On the TV: <b>All apps</b> → <b>⚙ Customize this screen</b>. Scan the code with your phone camera. A few short steps and you're done.</p>
+  <p class="lead">Press Home on the remote, then:</p>
+  <div class="flow wide">
+    <figure><img class="shot" src="img/tv-step-home.png" alt="The home screen with the All apps tile selected"><figcaption><span class="num">1</span><span>Pick <b>All apps</b>.</span></figcaption></figure>
+    <figure><img class="shot" src="img/tv-step-allapps.png" alt="All apps, with Customize this screen first"><figcaption><span class="num">2</span><span>Pick <b>⚙ Customize this screen</b>. It's always first.</span></figcaption></figure>
+    <figure><img class="shot" src="img/tv-step-qr.png" alt="A QR code and a 4-digit code on the TV"><figcaption><span class="num">3</span><span>Point your <b>phone camera</b> at the code and tap the link. Same Wi-Fi as the TV.</span></figcaption></figure>
+  </div>
+  <p class="lead" style="margin-top:22px">Then a few short steps on your phone and you're done:</p>
   <div class="phones">
     <figure><img class="shot" src="img/phone-start.png" alt="Pick who the TV is for"><figcaption>Who's it for</figcaption></figure>
     <figure><img class="shot" src="img/phone-family.png" alt="Add the family and birthdays"><figcaption>Your family</figcaption></figure>
