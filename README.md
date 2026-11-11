@@ -31,6 +31,12 @@ Fire TV (sticks and TVs from Toshiba, Insignia and Amazon) and Google TV / Andro
 - The phone settings page works only on your home Wi-Fi, with a code shown on the TV.
 - The TV only fetches public things: weather, scores and local headlines.
 
+## Is it safe?
+
+Nothing is rooted or hacked, and the TV's system software isn't changed. Developer options is a standard menu, the home screen is an ordinary app, and the optional cleanup only switches apps off (nothing is deleted). Restore, uninstalling or a factory reset puts everything back.
+
+Shared free and as-is, without any warranty. Not affiliated with Amazon, Google, Microsoft or Apple.
+
 ## Say thanks
 
 It's free. If it made your TV nicer, you can [buy me a coffee on Ko-fi](https://ko-fi.com/familytvhomescreen). Completely optional.
